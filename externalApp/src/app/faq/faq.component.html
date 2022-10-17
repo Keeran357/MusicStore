@@ -1,0 +1,20 @@
+<div class="col-md-12">
+    <h1 class="text-center mt-5 mb-5">Angular 12 Bootstrap 5 Accordion with Dynamic Data</h1>
+    <div class="accordion" id="accordionExample"><!--ngfor loop started for dynamic data -->
+        <div class="accordion-item" *ngFor="let item of selectedData; let i = index">
+          <div class="accordion-header" [id]="'heading'+i">
+            <button class="accordion-button" [ngClass]="{ 'collapsed': i != 0 }" type="button" 
+              data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" 
+              [attr.aria-controls]="'collapse'+i">
+              <strong>{{item.q}}</strong>
+            </button>
+          </div>
+          <div [id]="'collapse'+i" class="accordion-collapse collapse"
+             [ngClass]="{ 'show': i == 0 }" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              {{item.a}}
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
