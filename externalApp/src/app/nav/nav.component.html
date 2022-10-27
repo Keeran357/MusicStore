@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar  navbar-expand-sm navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="assets/images/logo.svg" alt="Logo"> 
@@ -9,30 +9,31 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
+          <a class="nav-link" href="#" [routerLink]="['/request']" routerLinkActive="router-link-active" >Add Request</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
+          <a class="nav-link" href="#" [routerLink]="['/requests']" routerLinkActive="router-link-active" >Requests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li>
-        <li class="nav-item dropdown">           
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-            <img src="assets/images/profile-picture.svg" alt="Profile" style="width:40px;" class="rounded-pill">
-            Profile
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link 1</a></li>
-            <li><a class="dropdown-item" href="#">Link 2</a></li>
-            <li><a class="dropdown-item" href="#">Link 3</a></li>
-          </ul>
-        </li>
+          <a class="nav-link" href="#" [routerLink]="['/faq']" routerLinkActive="router-link-active" >FAQ</a>
+        </li>        
+        
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search">
         <button class="btn btn-primary" type="button">Search</button>
-      </form>
+      </form> -->
+      <div class="nav-item dropdown">           
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+          <img src="assets/images/profile-picture.svg" alt="Profile" style="width:40px;" class="rounded-pill">
+          Username
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" [routerLink]="['/profile']" routerLinkActive="router-link-active" >Profile</a></li>
+          <li><a class="dropdown-item" href="#">Link 2</a></li>
+          <li><a class="dropdown-item" href="#">Link 3</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

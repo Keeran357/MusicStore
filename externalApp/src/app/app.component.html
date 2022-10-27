@@ -43,54 +43,6 @@
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-  /* display: table;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; */
-  position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 35px;
-    width: 100%;
-}
-
- /* footer a {
-  display: flex;
-  align-items: center;
-} */
-
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
-}
-
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
-
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
-
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
-
 h1,
 h2,
 h3,
@@ -139,8 +91,40 @@ p {
 .toolbar #youtube-logo:hover {
   opacity: 0.8;
 }
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+svg#rocket-smoke {
+  height: calc(100vh - 95px);
+  position: absolute;
+  top: 10px;
+  right: 180px;
+  z-index: -10;
+}
+
+svg#rocket {
+  width: 80px;
+  position: absolute;
+  left: -10px;
+  top: -24px;
+}
+
+svg#rocket-smoke {
+  height: calc(100vh - 95px);
+  position: absolute;
+  top: 10px;
+  right: 180px;
+  z-index: -10;
+}
 </style> 
 
+  <!-- navbar -->
 <app-nav></app-nav>
 
 <!-- Add Content Here -->
@@ -153,9 +137,8 @@ p {
   <div *ngIf="!loader">
     <router-outlet></router-outlet>
   </div>
+
 </div>
 
-<!-- Footer -->
-<footer>
-  Copyright (c) 2022 &nbsp; <a href="https://www.comviva.com" target="_blank" rel="noopener"> Comviva </a> &nbsp; All rights reserved.
-</footer>
+  <!-- Footer -->
+<app-footer></app-footer>

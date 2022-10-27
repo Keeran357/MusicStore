@@ -1,0 +1,14 @@
+<p>add-request works!</p>
+
+<ngx-dropzone #drop
+    [multiple]="true" 
+    [maxFileSize]="10000000"
+    [expandable]="true"
+    [disableClick]="disableDrop"
+    (change)="onSelect($event)">
+	<ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+	<ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+		<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+	</ngx-dropzone-preview>
+</ngx-dropzone>
+<button (click)="drop.showFileSelector()">Open</button>
