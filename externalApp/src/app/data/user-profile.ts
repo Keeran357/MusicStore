@@ -7,5 +7,6 @@ export interface IUserProfile{
     address1:string,
     address2:string,
     company:string,
-    consent:boolean
+    consent:boolean,
+    profilePic:string
 }

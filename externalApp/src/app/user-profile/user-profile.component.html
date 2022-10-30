@@ -1,80 +1,186 @@
-<div>
-    <h2>User Profile</h2>
-    <form #form="ngForm" ngNativeValidate>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Name" type="text" 
-                    class="form-control" 
-                    [(ngModel)]="userProfile.name"
-                    required
-                    minlength="2" 
-                    maxlength="15" 
-                    #propertyTest="ngModel"
-                >
-        </div>
+    <!--Edit-Profile Page Start-->
+    <div class="edit-profile-page">
+      <div class="edit-profile-section">
+          <div class="container">
+              <div class="edit-profile-block">
+                  <!-- <div class="edit-profile-title">
+                      <a class="back-link" href="https://multiatesting.in/comvivahtml/html/Edit-Profile.html#">Edit Profile</a>
+                  </div> -->
+                  <div class="edit-profile-main">
+                      <div class="edit-profile-left">
+                          <div class="profile-picture">
+                            <img src={{profilePicture}} alt="profile"> 
+                          </div>
+                          <div class="profile-action">
+                            <a class="btn button btn-upload" onclick="document.getElementById('file').click();" >upload photo</a>
+                            <a class="btn button btn-remove" >Remove</a>
 
-        <h4>dirty : {{propertyTest.dirty}}</h4>
-        <h4>pristine : {{propertyTest.pristine}}</h4>
-        <h4>touched : {{propertyTest.touched}}</h4>
-        <h4>untouched : {{propertyTest.untouched}}</h4>
-        <h4>valid : {{propertyTest.valid}}</h4>
-        <h4>invalid : {{propertyTest.invalid}}</h4>
+                            <input hidden  id="file" type="file" class="button btn-upload"
+                                 accept=".jpg,.png">                          
+                          </div>
+                      </div>
+                      <div class="edit-profile-form">
+                        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                              <div class="form-input">
+                                  <label class="form-label">Name <span>*</span></label>
+                                  <input
+                                        class="input-text"
+                                        type="text"
+                                        name="name" 
+                                        placeholder="First Lastname"
+                                        [(ngModel)]="userProfile.name"
+                                        required
+                                        (blur)="onBlur(nameField)"
+                                        #nameField="ngModel"
+                                        [class.field-error]="form.submitted && nameField.invalid">
+                                    <div [hidden]="!form.submitted || nameField.valid"
+                                      class="alert alert-danger">
+                                      Enter a name
+                                    </div>
+                              </div>
+                              <div class="form-input">
+                                  <label class="form-label">Email <span>*</span></label>
+                                  <input 
+                                        class="input-text"
+                                        type="email"
+                                        [(ngModel)]="userProfile.email"
+                                        name="emailid"
+                                        placeholder="user@gmail.com"
+                                        required>
+                              </div>
+                              <div class="form-input">
+                                  <label class="form-label">Mobile</label>
+                                  <input
+                                        type="tel"
+                                        pattern="[0-9]+"
+                                        maxlength="10"
+                                        class="input-text"
+                                        [(ngModel)]="userProfile.mobile"
+                                        placeholder="+91 1234567890"
+                                        name="mobilenumber">
+                              </div>
+                              <div class="form-input">
+                                  <label class="form-label">Company <span>*</span></label>
+                                  <input
+                                        type="text"
+                                        class="input-text"
+                                        name="company"
+                                        placeholder="Comviva"
+                                        [(ngModel)]="userProfile.company"
+                                        required
+                                        (blur)="onBlur(companyField)"
+                                        #companyField="ngModel"
+                                        [class.field-error]="form.submitted && companyField.invalid">
+                                    <div [hidden]="!form.submitted || companyField.valid"
+                                      class="field-error">
+                                      Enter a company name
+                                    </div>                                    
+                              </div>
+                              <div class="form-input">
+                                  <label class="form-label">Mailing Address Line 1</label>
+                                  <input
+                                        type="text"
+                                        class="input-text"
+                                        placeholder="Line one address, M-105"
+                                        [(ngModel)]="userProfile.address1"
+                                        name="MailingAddress1">
+                              </div>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" name="email" class="form-control" placeholder="Email" type="email" [(ngModel)]="userProfile.email">
-        </div>
+                              <div class="form-input">
+                                  <label class="form-label">Mailing Address Line 2</label>
+                                  <input
+                                      type="text"
+                                      class="input-text"
+                                      placeholder="Line two address, Landmark"
+                                      [(ngModel)]="userProfile.address2"
+                                      name="MailingAddress2">
+                              </div>
 
-        <p>User Type</p>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="userType" id="exampleRadios1" value="Requestor" [(ngModel)]="userProfile.userType">
-                <label class="form-check-label" for="exampleRadios1">
-                  Requestor
-                </label>
+                              <div class="form-input">
+                                <label for="userRole" class="form-label">User Roles</label>
+                                <select class="form-control" id="userRoles"
+                                  name="userRole" [(ngModel)]="userProfile.userRole">
+                                  <option *ngFor="let role of userRoles | async">{{role}}</option>
+                                </select>
+                              </div>
+
+                              <div class="form-input">
+                                <label for="startDate" class="form-label">Date</label>
+                                <input
+                                    type="text"
+                                    class="input-text"
+                                    placeholder="Start Date"                                  
+                                    name="startDate"
+                                    id="startDate"
+                                    [minDate]="minDate"
+                                    [maxDate]="maxDate"
+                                    [(ngModel)]="startDate"
+                                    bsDatepicker
+                                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
+                                  >
+                              </div>
+
+                              <div class="form-input">
+                                <label for="fromToDate" class="form-label">From date - To date</label>
+                                <input
+                                    type="text"
+                                    class="input-text"
+                                    placeholder="From date - To date"                                  
+                                    name="fromToDate"
+                                    id="fromToDate"
+                                    [(ngModel)]="bsRangeValue"
+                                    bsDaterangepicker
+                                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
+                                  >
+                              </div>
+
+
+
+                              <div class="form-input">           
+                                  <label class="form-label">
+                                  <input
+                                        type="checkbox"
+                                        [(ngModel)]="userProfile.consent"
+                                        name="consent"> 
+                                    I agree to the 
+                                    <a href="https://www.comviva.com/legal/privacy-policy/" target="_blank">Privacy Policy</a>. 
+                                    I have read and agree to the 
+                                    <a href="https://www.comviva.com/legal/privacy-policy/" target="_blank">Terms</a>. 
+                                </label>
+                              </div>
+
+                              <div class="form-input">
+                                <label for="rating" class="form-label">Rating</label>
+                                <rating [(ngModel)]="rating" [max]="maxRating"
+                                   name="rating" id="rating"
+                                    [titles]="['one','two','three']"></rating>
+                                  {{rating}}  
+                              </div>
+
+                              <div 
+                                  [hidden]="!postError"
+                                  class="alert alert-danger">
+                                  {{postErrorMessage}}
+                              </div>
+
+                              <div class="form-submit">
+                                <button
+                                      type="submit"
+                                      class="btn button">
+                                  Save Changes
+                                </button>
+                              </div>
+
+                              <input type="hidden"  [(ngModel)]="userProfile.userRole" name="userRole">
+                              <input type="hidden"  [(ngModel)]="userProfile.userType" name="userType">
+                              <input type="hidden"  [(ngModel)]="userProfile.profilePic" name="profilePic">
+                          </form>
+                      </div>
+                  </div>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="userType" id="exampleRadios2" value="SPOC" [(ngModel)]="userProfile.userType">
-                <label class="form-check-label" for="exampleRadios2">
-                  SPOC
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="userType" id="exampleRadios3" value="Regular Employee" [(ngModel)]="userProfile.userType">
-                <label class="form-check-label" for="exampleRadios3">
-                  Regular Employee
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="userType" id="exampleRadios4" value="Admin" [(ngModel)]="userProfile.userType">
-                <label class="form-check-label" for="exampleRadios4">
-                  Admin
-                </label>
-              </div>
-        </div>
+          </div>
+      </div>
+  </div>
+  <!--Edit-Profile Page End-->
 
-        <div class="form-group">            
-            <label for="userRole">User Role</label>
-            <select class="form-control" id="userRole" name="userRole" [(ngModel)]="userProfile.userRole">
-                <option>Requestor</option>
-                <option>SPOC</option>
-                <option>Regular Employee</option>
-                <option>Admin</option>
-            </select>
-        </div>
-
-        <div class="form-check form-group">
-            <input class="form-check-input" type="checkbox" id="consent" name="consent" [(ngModel)]="userProfile.consent">
-            <label class="form-check-label" for="consent">
-                I agree to the 
-                <a href="https://www.comviva.com/legal/privacy-policy/" target="_blank">Privacy Policy</a>. 
-                I have read and agree to the <a href="https://www.comviva.com/legal/privacy-policy/" target="_blank">Terms</a>. 
-            </label>
-        </div>
-
-        <button class="btn btn-success">Save Changes</button>
-    </form>
-</div>
-
-
-{{form.value | json}}
+  {{form.value | json}}

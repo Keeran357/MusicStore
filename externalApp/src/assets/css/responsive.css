@@ -1,0 +1,405 @@
+@media (min-width: 1200px) and (max-width: 1439px){
+
+/*============ Common Style Start ============*/
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+
+/*............Add-Request Page Start............*/
+/*............Add-Request Page End............*/
+
+/*............Request-Form Page Start............*/
+.request-form-topbar .topbar-title { padding:0px 80px;}
+.request-form-block { padding:50px 80px;}
+/*............Request-Form Page End............*/
+
+/*............Login-Register Page Start............*/
+/*............Login-Register Page End............*/
+
+/*............Edit-Profile Page Start............*/
+/*............Edit-Profile Page End............*/
+
+/*............Requests Page Start............*/
+.requests-table .table tbody tr td { font-size:14px;}
+.requests-table .table tbody tr td .td-subject .text-box { max-width:260px;}
+.requests-table.version-2 .table tbody tr td .td-subject .text-box { max-width:300px;}
+/*............Requests Page End............*/
+
+/*............Request-Detail Page Start............*/
+/*............Request-Detail Page End............*/
+
+/*............Edit-Request-Info Page Start............*/
+/*............Edit-Request-Info Page End............*/
+
+/*............Feedback Modal Start............*/
+/*............Feedback Modal End............*/
+
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+/*============ Common Style Start ============*/
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+
+/*............Add-Request Page Start............*/
+.add-request-block .add-request-box { padding:40px 20px;}
+.add-request-circle img { max-width:435px; max-height:600px;}
+/*............Add-Request Page End............*/
+
+/*............Request-Form Page Start............*/
+.request-form-topbar .topbar-title { padding:0px;}
+.request-form-block { padding:50px 50px;}
+/*............Request-Form Page End............*/
+
+/*............Login-Register Page Start............*/
+.login-register-block { width:550px;}
+.login-register-form { min-height:680px; padding:50px 50px;}
+.login-register-form .form-title { margin:0 0 30px 0;}
+.login-register-circle-big { right:-225px;}
+.login-register-circle-big img { max-width:450px;}
+/*............Login-Register Page End............*/
+
+/*............Edit-Profile Page Start............*/
+.edit-profile-title { margin:0 0 50px 0;}
+.edit-profile-form .form-submit { margin:15px 0 0 0;}
+/*............Edit-Profile Page End............*/
+
+/*............Requests Page Start............*/
+.requests-table .table tbody tr td { height:50px; font-size:13px; line-height:20px; vertical-align:top;}
+.requests-table .table tbody tr td .td-subject { -ms-flex-direction:column; flex-direction:column; -ms-flex-align:start; align-items:flex-start;}
+.requests-table .table tbody tr td .td-subject .text-box { max-width:200px;}
+.requests-table .table tbody tr td .td-subject .action-box { width:100%; margin:12px 0 0 0;}
+.requests-table .table tbody tr td .td-status { font-size:13px;}
+.requests-table.version-2 .table tbody tr td .td-subject .text-box { max-width:200px;}
+/*............Requests Page End............*/
+
+/*............Request-Detail Page Start............*/
+.request-detail-title { padding:20px 20px;}
+.request-detail-title .title-text h4 { font-size:22px;}
+.request-detail-comment .comment-box { padding:30px 30px 30px 82px;}
+.request-detail-comment .comment-box .comment-title .comment-avtar { left:-62px;}
+.request-detail-form { margin:30px 0 0 0;}
+.request-detail-form .form-textarea .input-text { height:180px;}
+/*............Request-Detail Page End............*/
+
+/*............Edit-Request-Info Page Start............*/
+.edit-request-info-block .request-leftbar { width:calc(100% - 320px);}
+.edit-request-info-block .request-rightbar { width:320px; padding:30px 20px;}
+/*............Edit-Request-Info Page End............*/
+
+/*............Feedback Modal Start............*/
+/*............Feedback Modal End............*/
+
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+/*============ Common Style Start ============*/
+.button { min-width:200px;}
+.h1, h1 { font-size:36px;}
+.h2, h2 { font-size:30px;}
+.h3, h3 { font-size:30px;}
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+
+/*............Add-Request Page Start............*/
+.add-request-topbar .topbar-title .topbar-pattern { left:280px;}
+.add-request-topbar .topbar-title .topbar-pattern img { max-width:60px; max-height:60px;}
+.add-request-block .add-request-box { padding:30px 20px;}
+.add-request-block .add-request-box .box-text { margin:20px 0 0 0;}
+.add-request-block .add-request-box .box-text h5 { font-size:16px;}
+.add-request-circle img { max-width:360px; max-height:500px;}
+/*............Add-Request Page End............*/
+
+/*............Request-Form Page Start............*/
+.request-form-topbar .topbar-title { padding:0px;}
+.request-form-block { padding:50px 30px;}
+/*............Request-Form Page End............*/
+
+/*............Login-Register Page Start............*/
+.login-register-section { padding:50px 0 140px 0;}
+.login-register-block { width:530px;}
+.login-register-logo img { width:170px;}
+.login-register-form { min-height:650px; padding:40px 40px;}
+.login-register-form .form-title { margin:0 0 30px 0;}
+.login-register-form .form-tabs .nav-tabs { margin:0 0 40px 0;}
+.login-register-form .form-block .form-otp { margin:0 0 30px 0;}
+.login-register-form .form-block .form-otp .otp-text { padding:0 0 40px 0;}
+.login-register-form .form-block .form-account { margin:30px 0 0 0;}
+.login-register-form .password-success { width:300px; padding:40px 0px;}
+.login-register-form .password-success .success-icon img { max-width:80px;}
+.login-register-form .password-success .success-text { font-size:20px; margin:20px 0 0 0;}
+.login-register-circle-big { right:-200px;}
+.login-register-circle-big img { max-width:400px;}
+.login-register-pattern { bottom:-80px; left:-80px;}
+.login-register-pattern img { max-width:140px;}
+/*............Login-Register Page End............*/
+
+/*............Edit-Profile Page Start............*/
+.edit-profile-block { width:100%;}
+.edit-profile-title { margin:0 0 40px 0;}
+.edit-profile-left { width:100%;}
+.edit-profile-form { width:100%; padding:40px 0 0 0;}
+.edit-profile-form .form-submit { margin:15px 0 0 0;}
+/*............Edit-Profile Page End............*/
+
+/*............Requests Page Start............*/
+.requests-topbar { margin:0 0 30px 0;}
+.requests-topbar .requests-title { width:100%;}
+.requests-topbar .requests-title h1 { font-size:30px;}
+.requests-topbar .requests-filter { width:100%; margin:20px 0 0 0;}
+.requests-table .table thead { display:none;}
+.requests-table .table tbody tr { background:#F7F7F7;}
+.requests-table .table tbody tr:nth-of-type(odd) { background:#FFFFFF;}
+.requests-table .table tbody tr td { width:100%; height:auto; display:block; font-size:14px; line-height:20px; padding:14px 15px;}
+.requests-table .table tbody tr td:before { content:attr(data-label); width:100%; display:block; font-family: 'OpenSans-SemiBold'; font-size:14px; color:#a1a1a1; line-height:20px; margin:0 0 5px 0; padding:0px;}
+.requests-table .table tbody tr td .td-subject { -ms-flex-direction:column; flex-direction:column; -ms-flex-align:start; align-items:flex-start;}
+.requests-table .table tbody tr td .td-subject .text-box { width:100%; max-width:100%; white-space:normal;}
+.requests-table .table tbody tr td .td-subject .action-box { width:100%; margin:12px 0 0 0;}
+.requests-table .table tbody tr td .td-status { font-size:14px;}
+.requests-table .table tbody tr td .td-btnbox { margin:-5px 0 0 0;}
+.requests-table.version-2 .table tbody tr td .td-subject .text-box { max-width:100%;}
+/*............Requests Page End............*/
+
+/*............Request-Detail Page Start............*/
+.request-detail-title { padding:20px 20px;}
+.request-detail-title .title-text { width:100%;}
+.request-detail-title .title-text h4 { font-size:20px;}
+.request-detail-title .title-text .title-meta ul li { font-size:14px;}
+.request-detail-title .title-btnbox { width:100%; text-align:left; margin:10px 0 0 0;}
+.request-detail-comment .comment-box { padding:20px 20px 20px 82px;}
+.request-detail-comment .comment-box .comment-title .comment-avtar { left:-62px;}
+.request-detail-comment .comment-box .comment-text .text p { font-size:14px; line-height:20px;}
+.request-detail-comment .comment-box .comment-text .thumb-img .img { width:80px;}
+.request-detail-form { margin:30px 0 0 0;}
+.request-detail-form .form-textarea .input-text { height:160px; font-size:14px; line-height:20px;}
+/*............Request-Detail Page End............*/
+
+/*............Edit-Request-Info Page Start............*/
+.edit-request-info-block { background:none; border:none;}
+.edit-request-info-block .request-leftbar { width:100%; background:#FFFFFF; border:1px solid #EBEBEB;}
+.edit-request-info-block .request-rightbar { width:100%; background:#FFFFFF; border:1px solid #EBEBEB; margin:30px 0 0 0; padding:20px 20px;}
+.edit-request-info-block .edit-request-form .form-title { margin:0 0 20px 0;}
+/*............Edit-Request-Info Page End............*/
+
+/*............Feedback Modal Start............*/
+/*............Feedback Modal End............*/
+
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}
+
+@media (max-width: 767px){
+
+/*============ Common Style Start ============*/
+.container { max-width:100%;}
+.button { min-width:200px;}
+.h1, h1 { font-size:30px;}
+.h2, h2 { font-size:28px;}
+.h3, h3 { font-size:28px;}
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+.header { height:70px;}
+.header-block { height:70px; padding:10px 0px;}
+.logo .logo-image img { max-width:70px; max-height:20px;}
+.header-feedback .feedback-link { font-size:12px;}
+.header-feedback .feedback-link span { display:none;}
+.header-btnbox { margin:0 0 0 10px;}
+.header-btnbox .button { min-width:100px; font-size:10px; text-indent:0px !important; padding:8px 10px 7px 10px;}
+.header-btnbox .button:before { display:none;}
+.header-user-info { margin:0px;}
+.header-user-info .user-notification { width:20px; margin:0 0 0 10px;}
+.header-user-info .user-profile { margin:0 0 0 10px;}
+.header-user-info .user-profile .dropdown .user-icon { width:36px; height:36px;}
+.header-user-info .user-profile .dropdown .user-icon img { max-width:20px; max-height:20px;}
+.header-user-info .user-profile .dropdown .dropdown-menu { min-width:200px; margin:10px 0 0 0; padding:8px 8px;}
+.header-user-info .user-profile .dropdown .dropdown-menu .dropdown-item { font-size:14px; line-height:20px; padding:5px 10px;}
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+
+/*............Add-Request Page Start............*/
+.add-request-topbar { padding:50px 0 100px 0;}
+.add-request-topbar .topbar-title .topbar-pattern { left:250px;}
+.add-request-topbar .topbar-title .topbar-pattern img { max-width:60px; max-height:60px;}
+.add-request-section { padding:0 0 60px 0;}
+.add-request-block { margin:-50px 0 0 0;}
+.add-request-block .add-request-box { padding:40px 20px;}
+.add-request-block .add-request-box .box-text { margin:20px 0 0 0;}
+.add-request-block .add-request-box .box-text h5 { font-size:16px;}
+.add-request-block .add-request-pattern { bottom:-35px; left:-50px;}
+.add-request-block .add-request-pattern img { max-width:120px;}
+.add-request-circle { top:-70px;}
+.add-request-circle img { max-width:260px; max-height:360px;}
+/*............Add-Request Page End............*/
+
+/*............Request-Form Page Start............*/
+.request-form-topbar { padding:50px 0 100px 0;}
+.request-form-topbar .topbar-title { padding:0px;}
+.request-form-topbar .topbar-title .topbar-icon { width:60px;}
+.request-form-topbar .topbar-title .topbar-text { width:calc(100% - 60px); padding:0 0 0 15px;}
+.request-form-topbar .topbar-title .topbar-text h1 { font-size:28px;}
+.request-form-section { padding:0 0 60px 0;}
+.request-form-block { margin:-50px 0 0 0; padding:40px 20px;}
+.request-form-block .request-form .form-input .upload-box .upload-file { padding:30px 15px;}
+.request-form-block .request-form .form-submit { margin:10px 0 0 0;}
+.request-form-block .request-form .form-submit .button { min-width:100%;}
+/*............Request-Form Page End............*/
+
+/*............Login-Register Page Start............*/
+.login-register-section { padding:30px 0 60px 0;}
+.login-register-block { width:100%;}
+.login-register-logo img { width:140px;}
+.login-register-form { min-height:340px; padding:30px 15px;}
+.login-register-form .form-title { margin:0 0 20px 0;}
+.login-register-form .form-title h1 { font-size:28px;}
+.login-register-form .form-title p { margin:10px 0 0 0;}
+.login-register-form .form-tabs .nav-tabs { margin:0 0 30px 0;}
+.login-register-form .form-block .form-otp { margin:0 0 20px 0;}
+.login-register-form .form-block .form-otp .otp-text { padding:0 0 30px 0;}
+.login-register-form .form-block .form-account { margin:30px 0 0 0;}
+.login-register-form .password-success { width:300px; padding:30px 0px;}
+.login-register-form .password-success .success-icon img { max-width:70px;}
+.login-register-form .password-success .success-text { font-size:18px; margin:20px 0 0 0;}
+.login-register-circle-big { right:-100px;}
+.login-register-circle-big img { max-width:200px;}
+.login-register-circle-small { right:30px; bottom:-40px;}
+.login-register-circle-small img { max-width:120px;}
+.login-register-pattern { bottom:-40px; left:-40px;}
+.login-register-pattern img { max-width:100px;}
+/*............Login-Register Page End............*/
+
+/*............Edit-Profile Page Start............*/
+.edit-profile-section { padding:50px 0 60px 0;}
+.edit-profile-block { width:100%;}
+.edit-profile-title { margin:0 0 30px 0;}
+.edit-profile-title .back-link { font-size:18px;}
+.edit-profile-title .back-link:before { top:2px;}
+.edit-profile-left { width:100%;}
+.edit-profile-left .profile-picture { width:100px; height:100px;}
+.edit-profile-left .profile-action { margin:20px 0 0 0;}
+.edit-profile-form { width:100%; padding:30px 0 0 0;}
+.edit-profile-form .form-submit { margin:10px 0 0 0;}
+.edit-profile-form .form-submit .button { min-width:200px;}
+/*............Edit-Profile Page End............*/
+
+/*............Requests Page Start............*/
+.requests-section { padding:50px 0 60px 0;}
+.requests-topbar { margin:0 0 30px 0;}
+.requests-topbar .requests-title { width:100%;}
+.requests-topbar .requests-title h1 { font-size:28px;}
+.requests-topbar .requests-filter { width:100%; margin:20px 0 0 0;}
+.requests-table .table thead { display:none;}
+.requests-table .table tbody tr { background:#F7F7F7;}
+.requests-table .table tbody tr:nth-of-type(odd) { background:#FFFFFF;}
+.requests-table .table tbody tr td { width:100%; height:auto; display:block; font-size:14px; line-height:20px; padding:14px 15px;}
+.requests-table .table tbody tr td:before { content:attr(data-label); width:100%; display:block; font-family: 'OpenSans-SemiBold'; font-size:14px; color:#a1a1a1; line-height:20px; margin:0 0 5px 0; padding:0px;}
+.requests-table .table tbody tr td .td-subject { -ms-flex-direction:column; flex-direction:column; -ms-flex-align:start; align-items:flex-start;}
+.requests-table .table tbody tr td .td-subject .text-box { width:100%; max-width:100%; white-space:normal;}
+.requests-table .table tbody tr td .td-subject .action-box { width:100%; margin:12px 0 0 0;}
+.requests-table .table tbody tr td .td-status { font-size:14px;}
+.requests-table .table tbody tr td .td-btnbox { margin:-5px 0 0 0;}
+.requests-table.version-2 .table tbody tr td .td-subject .text-box { max-width:100%;}
+/*............Requests Page End............*/
+
+/*............Request-Detail Page Start............*/
+.request-detail-section { min-height:calc(100vh - 70px); padding:40px 0 60px 0;}
+.request-detail-title { padding:15px 15px;}
+.request-detail-title .title-text { width:100%;}
+.request-detail-title .title-text h4 { font-size:18px;}
+.request-detail-title .title-text .title-meta ul li { font-size:14px; margin:2px 20px 2px 0px;}
+.request-detail-title .title-btnbox { width:100%; text-align:left; margin:10px 0 0 0;}
+.request-detail-comment .comment-box { padding:15px 15px 15px 65px;}
+.request-detail-comment .comment-box .comment-title { margin:0 0 20px 0;}
+.request-detail-comment .comment-box .comment-title .comment-avtar { width:36px; height:36px; left:-50px;}
+.request-detail-comment .comment-box .comment-title .comment-name { font-size:16px;}
+.request-detail-comment .comment-box .comment-title .comment-name .agent-btn { width:120px; display:block; text-align:center; margin:5px 0 0 0;}
+.request-detail-comment .comment-box .comment-text .text p { font-size:14px; line-height:20px; margin:0 0 15px 0;}
+.request-detail-comment .comment-box .comment-text .thumb-img .img { width:70px;}
+.request-detail-form { margin:30px 0 0 0;}
+.request-detail-form .form-textarea .input-text { height:150px; font-size:14px; line-height:20px; padding:15px 15px;}
+.request-detail-form .form-footer { padding:15px 15px;}
+.request-detail-form .form-footer .form-icons .icon-btn { margin:0 10px 0 0;}
+.request-detail-form .form-footer .form-submit .submit-btn { min-width:160px;}
+/*............Request-Detail Page End............*/
+
+/*............Edit-Request-Info Page Start............*/
+.edit-request-info-block { background:none; border:none;}
+.edit-request-info-block .request-leftbar { width:100%; background:#FFFFFF; border:1px solid #EBEBEB;}
+.edit-request-info-block .request-rightbar { width:100%; background:#FFFFFF; border:1px solid #EBEBEB; margin:30px 0 0 0; padding:15px 15px;}
+.edit-request-info-block .edit-request-form .form-title { margin:0 0 20px 0;}
+/*............Edit-Request-Info Page End............*/
+
+/*............Feedback Modal Start............*/
+.feedback-modal .modal-dialog { max-width:100%; margin-left:15px; margin-right:15px;}
+.feedback-modal .modal-body { padding:30px 15px;}
+.feedback-modal .feedback-modal-form .form-title h3 { font-size:24px;}
+.feedback-modal .feedback-modal-form .form-rating { margin:0 0 20px 0;}
+.feedback-modal .feedback-modal-form .form-rating .rating-emoji .rating-icon { width:46px; height:46px; margin:0px 4px;}
+.feedback-modal .feedback-modal-form .form-rating .rating-emoji .rating-icon img { max-width:30px; max-height:30px;}
+/*............Feedback Modal End............*/
+
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+
+/*============ Common Style Start ============*/
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}
+
+@media (max-width: 575px){
+
+/*============ Common Style Start ============*/
+/*============ Common Style End ============*/
+
+/*============ Header Start ============*/
+/*============ Header End ============*/
+
+/*============ Content Start ============*/
+/*============ Content End ============*/
+
+/*============ Footer Start ============*/
+/*============ Footer End ============*/
+
+}

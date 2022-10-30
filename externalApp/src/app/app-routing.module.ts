@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'requests', component: RequestsListComponent },
-  { path: 'request', component: AddRequestComponent },
+  { path: 'add-request', component: AddRequestComponent },
   { path: 'profile', component: UserProfileComponent },
 ];
   

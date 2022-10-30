@@ -1,4 +1,18 @@
-<nav class="navbar  navbar-expand-sm navbar-light bg-light">
+<style>
+.dropdown-menu-nav { width:auto; min-width:220px; background:#FFFFFF; border:1px solid #EBEBEB; border-radius:0px; box-shadow:0px 2px 3px rgba(0,0,0,0.05); position:absolute; top:100% !important; left:auto !important; right:0px !important; -webkit-transform:none !important; transform:none !important; margin:10px 0 0 0; padding:10px 7px;}
+.dropdown-menu-nav .dropdown-item { width:100%; display:block; font-family: 'OpenSans-Regular'; font-size:16px;  line-height:22px; margin:0px; padding:5px 10px;}
+.dropdown-menu-nav .dropdown-item:hover,
+.dropdown-menu-nav .dropdown-item:focus { color:#FFFFFF; background:#E31837;}
+.dropdown-menu-active {  color:#FFFFFF; background:#E31837;}
+
+li .active{
+  border: 5px;
+  border-style: none none solid none ;
+  border-color: #E31837;
+}
+</style>
+
+<!-- <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="assets/images/logo.svg" alt="Logo"> 
@@ -9,31 +23,114 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#" [routerLink]="['/request']" routerLinkActive="router-link-active" >Add Request</a>
+          <a class="nav-link" href="#" [routerLink]="['/add-request']" routerLinkActive="active" >Add Request</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" [routerLink]="['/requests']" routerLinkActive="router-link-active" >Requests</a>
+          <a class="nav-link" href="#" [routerLink]="['/requests']" routerLinkActive="active" >Requests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" [routerLink]="['/faq']" routerLinkActive="router-link-active" >FAQ</a>
+          <a class="nav-link" href="#" [routerLink]="['/faq']" routerLinkActive="active" >FAQ</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Requests
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Add Request</a>
+            <a class="dropdown-item" href="#">All Requests</a>
+          </div>
         </li>        
-        
       </ul>
-      <!-- <form class="d-flex">
-        <input class="form-control me-2" type="text" placeholder="Search">
-        <button class="btn btn-primary" type="button">Search</button>
-      </form> -->
-      <div class="nav-item dropdown">           
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-          <img src="assets/images/profile-picture.svg" alt="Profile" style="width:40px;" class="rounded-pill">
+
+      <div class="nav-item">
+          <div class="user-icon">
+            <img src="assets/images/user-icon.svg" alt="Profile" class="rounded-pill">
+          </div>
+      </div>
+&nbsp;
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle text-left" id="dropdownMenuButton" 
+            data-bs-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
           Username
         </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" [routerLink]="['/profile']" routerLinkActive="router-link-active" >Profile</a></li>
-          <li><a class="dropdown-item" href="#">Link 2</a></li>
-          <li><a class="dropdown-item" href="#">Link 3</a></li>
-        </ul>
+
+        <div class="dropdown-menu dropdown-menu-nav dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" [routerLink]="['/profile']" routerLinkActive="active" (click)="selectComponent($event)">Profile</a>
+          <a class="dropdown-item" [routerLink]="['/faq']" routerLinkActive="active" (click)="selectComponent($event)">FAQ</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" >Sign out</a>
+        </div>
       </div>
+
     </div>
   </div>
-</nav>
+</nav> -->
+
+<!--Header Start-->
+<header class="header">
+	<div class="header-wrapper">
+    	<div class="container">
+        	<div class="header-block">
+            	<div class="logo">
+                    <a class="logo-image" href="#">
+                      <img src="assets/images/logo.svg" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <!-- <div class="header-feedback">
+                        <a class="feedback-link" href="https://multiatesting.in/comvivahtml/html/Edit-Profile.html#">
+                          <span><img src="assets/images/feedback-icon.svg" alt=""></span>Feedback</a>
+                    </div> -->
+                    <div class="header-btnbox">
+                        <a class="button" href="#" [routerLink]="['/add-request']" routerLinkActive="router-link-active" >Add request</a>
+                    </div>
+
+                    &nbsp;&nbsp;
+                    
+                    <div class="header-user-info">
+                      <p>                          
+                        <mat-icon [matBadge]="counter" matBadgeColor="warn">
+                          <img src="assets/images/notification-icon.svg" alt="">
+                        </mat-icon>
+                          <!-- Include text description of the icon's meaning for screen-readers -->
+                          <span class="cdk-visually-hidden">
+                            Badge showing the number of open requests 
+                          </span>
+                      </p>
+                    </div>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <div class="nav-item">
+                      <div class="user-icon">
+                        <img src="assets/images/user-icon.svg" alt="Profile" class="rounded-pill">
+                      </div>
+                    </div>
+                    
+                    &nbsp;&nbsp;
+
+                    <div class="user-profile">
+                        <div class="dropdown">
+                            <!-- <a class="user-icon dropdown-toggle" href="https://multiatesting.in/comvivahtml/html/Edit-Profile.html#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/user-icon.svg" alt="">
+                            </a> -->
+                            
+                            <a class="nav-link dropdown-toggle text-left" id="dropdownMenuButton" 
+                                data-bs-toggle="dropdown" aria-haspopup="true" 
+                                aria-expanded="false">
+                              Username
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-nav dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" [routerLink]="['/profile']" routerLinkActive="active" (click)="selectComponent($event)">Profile</a>
+                              <a class="dropdown-item" [routerLink]="['/faq']" routerLinkActive="active" (click)="selectComponent($event)">FAQ</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" >Sign out</a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Header End-->

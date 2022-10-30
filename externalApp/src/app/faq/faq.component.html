@@ -1,20 +1,63 @@
-<div class="col-md-12">
-    <h1 class="text-center mt-5 mb-5">Angular 12 Bootstrap 5 Accordion with Dynamic Data</h1>
-    <div class="accordion" id="accordionExample"><!--ngfor loop started for dynamic data -->
-        <div class="accordion-item" *ngFor="let item of selectedData; let i = index">
-          <div class="accordion-header" [id]="'heading'+i">
-            <button class="accordion-button" [ngClass]="{ 'collapsed': i != 0 }" type="button" 
-              data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" 
-              [attr.aria-controls]="'collapse'+i">
-              <strong>{{item.q}}</strong>
-            </button>
+ <!-- <style>
+  .accordion { width:100%; position:relative; background:#FFFFFF; border:1px solid #EBEBEB;}
+  .accordion .accordion-item { width:100%; display:inline-block; vertical-align:top; border-bottom:1px solid #EBEBEB; margin:0px; padding:0px;}
+  .accordion .accordion-item:last-child { border-bottom:none;}
+  .accordion .accordion-item .accordion-header { width:100%; position:relative; display:inline-block; vertical-align:top; font-family: 'Montserrat-Medium'; font-size:20px; color:#000000; line-height:1.3; cursor:pointer; -webkit-transition:all .3s ease-in-out; transition:all .3s ease-in-out; margin:0px; padding:30px 40px;}
+  .accordion .accordion-item.active .accordion-header { color:#E31837;}
+  .accordion .accordion-item .accordion-collapse { width:100%; display:none; margin:0px; padding:0px;}
+  .accordion .accordion-item .accordion-collapse .accordion-body { width:100%; display:block; margin:0px; padding:0px 40px 10px 40px;}
+  .accordion .accordion-item .accordion-collapse .accordion-body p { margin:0 0 20px 0; padding:0px;}
+ </style> -->
+
+ <style>
+    .collapsed{
+      color: black;
+    }
+    .collapse{
+      color: #E31837;
+    }
+ </style>
+
+<!--FAQ Page Start-->
+<div class="faq-page">
+  <div class="faq-topbar">
+      <div class="container">
+          <div class="topbar-title">
+              <h1>FAQ</h1>
+              <div class="topbar-pattern">
+                  <img src="assets/images/topbar-pattern.svg" alt="">
+              </div>
           </div>
-          <div [id]="'collapse'+i" class="accordion-collapse collapse"
-             [ngClass]="{ 'show': i == 0 }" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              {{item.a}}
-            </div>
+      </div>
+  </div>
+  <div class="faq-section">
+      <div class="container">
+          <div class="faq-block">
+            <div class="accordion" id="accordionExample"> 
+              <div class="accordion-item" *ngFor="let item of selectedData; let i = index">
+               <div class="accordion-header" [id]="'heading'+i">
+                 <button class="accordion-button" [ngClass]="{ 'collapsed': i != 0 }" type="button" 
+                   data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" 
+                   [attr.aria-controls]="'collapse'+i">
+                   <strong>{{item.q}}</strong>
+                 </button>
+               </div>
+               <div [id]="'collapse'+i" class="accordion-collapse collapse"
+                  [ngClass]="{ 'show': i == 0 }" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample">
+                 <div class="accordion-body">
+                   <p>{{item.a}}</p>
+                 </div>
+               </div>
+             </div>
+         </div>
+              <div class="faq-pattern">
+                  <img src="assets/images/faq-pattern.svg" alt="">
+              </div>
           </div>
-        </div>
-    </div>
+      </div>
+  </div>
+  <div class="faq-circle">
+      <img src="assets/images/faq-circle.svg" alt="">
+  </div>
 </div>
+<!--FAQ Page End-->

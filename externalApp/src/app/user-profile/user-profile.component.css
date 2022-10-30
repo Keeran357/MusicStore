@@ -1,0 +1,9 @@
+.ng-invalid:not(form).ng-touched {
+    border: 3px;
+    border-style: none none solid none ;
+    border-color: #E31837;
+}
+
+.field-error {
+    color:#E31837;
+}
